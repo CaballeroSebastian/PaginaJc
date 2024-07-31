@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsMorales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="pregunta" id="pregunta">Eres jc?</h1>
+        <button class="si" id="btnSi" onclick="handleYes()">Sí</button>
+        <button class="no" id="btnNo" onclick="handleNo()">No</button>
+        
+        <div id="secondQuestion" style="display: none;">
+            <h2 class="pregunta">EN SERIO SI ERES JC? 👀👀</h2>
+            <button class="si" onclick="loadVideo('videos/mondongo.mp4')">Sí</button>
+            <button class="no" onclick="showAlert()">No</button>
+        </div>
+
+        <video id="video" loop>
+            <source id="videoSource" src="" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <div id="noMessage" class="alert" style="display: none;">
+            <h2>¡Espera! 🚨</h2>
+            <p>¡No eres JC! ¡Todo es una broma! 😄</p>
+            <button onclick="closeNoMessage()">Cerrar</button>
+        </div>
+    </div>
+    
+    <div id="alertBox" class="alert" style="display: none;">
+        <h2>¡ALTO! 🚨</h2>
+        <p>33-12<br> 33-12<br>No se que poner XD</p>
+        <button onclick="closeAlert()">Cerrar</button>
+    </div>
+
+    <footer>
+        <p>By: CaballeroSebas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
